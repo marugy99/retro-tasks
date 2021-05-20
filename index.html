@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Retro Tasks">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="style.css">
+    <title>RetroTasks</title>
+</head>
+<body>
+
+    <main>
+        <section class="start-container">
+            <div class="toggler"><i class="fas fa-adjust"></i></div>
+            <img class="star" src="images/star.png" alt="star">
+            <h1>RetroTasks</h1>
+            <p>Complete tasks and earn stars. <br> You got this!</p>
+            <button id="start-btn">START</button>
+        </section>
+
+        <section class="form-container">
+            <div class="toggler"><i class="fas fa-adjust"></i></div>
+            <h1>RetroTasks</h1>
+            
+            <div class="data-container">
+                
+                <div class="score">
+                    <h2>Score:</h2> <span id="score-start"></span> <img class="star" src="images/star.png" alt="star">
+                </div>
+                
+                <div class="level">
+                    <h2>Level:</h2> <span id="level-start"></span><img class="heart" src="images/heart.png" alt="swords">
+                </div>
+                
+                <button id="exit-btn">X</button>
+
+            </div>
+
+
+            <form id="form" action="#">
+                <input type="text" placeholder="Enter your task" class="todo-input">
+                <button id="enter-btn" type="submit">Add</button>
+            </form>
+
+            <div id="you-won" class="none">
+                <h2>Congratulations you've reached level 5! Go take a break.</h2>
+                <button><a href="index.html">Restart</a></button>
+            </div>
+
+
+            <div class="todo-container">
+                <ul class="todo-list"></ul>
+            </div>
+        </section>
+
+        
+    </main>
+    
+    <audio id="click-sound" src="sounds/click.mp3"></audio>
+    <audio id="bonus-sound" src="sounds/bonus.wav"></audio>
+    <audio id="minus-sound" src="sounds/minus.wav"></audio>
+    <audio id="win-sound" src="sounds/win.wav"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
