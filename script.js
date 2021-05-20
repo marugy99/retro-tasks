@@ -66,13 +66,13 @@ exitBtn.addEventListener('click', function() {
 formField.addEventListener('submit', function(event) {
     event.preventDefault();
   
-    localStorage.setItem('items', JSON.stringify(itemsArray));
     
     if(todoInput.value === '') {
         alert('Please write something!');
     } else {
-        itemsArray.push(todoInput.value)
         addTodo(todoInput.value);
+        itemsArray.push(todoInput.value);
+        localStorage.setItem('items', JSON.stringify(itemsArray));
     }
     
     // Clear input field
