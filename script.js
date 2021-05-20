@@ -65,8 +65,7 @@ exitBtn.addEventListener('click', function() {
 
 formField.addEventListener('submit', function(event) {
     event.preventDefault();
-
-    
+  
     localStorage.setItem('items', JSON.stringify(itemsArray));
     
     if(todoInput.value === '') {
